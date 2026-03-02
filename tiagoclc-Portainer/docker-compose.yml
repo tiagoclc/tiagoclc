@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: tiagoclc_portainer_1
+      APP_PORT: 9000
+
+  portainer:
+    image: portainer/portainer-ce:2.39.0@sha256:3267f1869e0fa87b843c55f7fd848f9e3001367d053505f4cb8c664e4a997996
+    command: --host unix:///var/run/docker.sock --admin-password-file=/default-password
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/default-password:/default-password
+      - ${APP_DATA_DIR}/data/portainer:/data
+      - ${APP_DATA_DIR}/data/docker:/var/run
+      - /var/run/docker.sock:/var/run/docker.sock
