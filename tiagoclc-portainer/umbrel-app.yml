@@ -48,6 +48,7 @@ gallery:
   - 2.jpg
   - 3.jpg
 path: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/portainer.png
 defaultUsername: "admin"
 defaultPassword: "changeme"
 releaseNotes: >-
