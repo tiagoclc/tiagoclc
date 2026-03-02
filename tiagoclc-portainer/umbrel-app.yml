@@ -1,7 +1,7 @@
 manifestVersion: 1.1
-id: portainer
+id: tiagoclc-portainer
 category: developer
-name: Portainer
+name: Tiagoclc Portainer
 version: "2.39.0"
 tagline: Run custom Docker containers on your Umbrel
 description: >-
